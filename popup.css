@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #df6266;
+}
+
+html {
+    font-size: 62.5%;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+    font-weight: normal;
+    height: 100vh;
+    overflow: hidden;
+    background-image: linear-gradient(
+        to left bottom,
+        #f2a779,
+        #c64faf,
+        #393895
+    );
+}
+
+.open__modal-ptn {
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    border-radius: 0.6rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.modal__inner {
+    width: 40rem;
+    position: relative;
+    top: 30%;
+    margin: 0 auto;
+    background: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    animation: modalShow 1.2s ease;
+}
+
+.modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: var(--primary-color);
+    color: white;
+}
+
+i:hover {
+    cursor: pointer;
+    color: #03a9f4;
+}
+
+.modal__body {
+    padding: 1.5rem;
+}
+
+.modal__body h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.modal__footer {
+    padding: 1.5rem;
+    text-align: right;
+}
+
+.modal__footer button {
+    padding: 1rem 2rem;
+    color: white;
+    background: var(--primary-color);
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-image: linear-gradient(to right bottom, rgba(3, 168, 244, 0.534), #965cf4);
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes modalShow {
+    from {
+        top: -2rem;
+        opacity: 0;
+    }
+    to {
+        top: 30%;
+        opacity: 1;
+    }
+}
